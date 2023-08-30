@@ -1,0 +1,26 @@
+{
+  "name": "js-dev-env",
+  "version": "2.1.0",
+  "author": "jeremy@integratingmagic.io",
+  "license": "MIT",
+  "description": "a generic development environment for developing JS in FileMaker",
+  "scripts": {
+    "start": "parcel index.html  --no-source-maps",
+    "build": "parcel build index.html",
+    "upload": "node ./scripts/upload",
+    "deploy-to-fm": "npm run build && npm run upload",
+    "openfile": "node ./scripts/openFileOnServer",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "open": "^8.2.1",
+    "parcel": "^2.8.1",
+    "prettier": "2.6.2"
+  },
+  "dependencies": {
+    "yargs": "^17.7.2"
+  }
+}
